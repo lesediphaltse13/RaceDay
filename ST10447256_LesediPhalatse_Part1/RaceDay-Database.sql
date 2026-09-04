@@ -307,3 +307,23 @@ INNER JOIN EventCategories
     ON Enrolments.CategoryId = EventCategories.CategoryId
 INNER JOIN Events
     ON EventCategories.EventId = Events.EventId;
+
+-- Display participant results
+
+SELECT
+    Participants.FirstName,
+    Participants.LastName,
+    Events.EventName,
+    EventCategories.CategoryName,
+    Results.FinishTime,
+    Results.Position,
+    Results.Status
+FROM Results
+INNER JOIN Enrolments
+    ON Results.EnrolmentId = Enrolments.EnrolmentId
+INNER JOIN Participants
+    ON Enrolments.ParticipantId = Participants.ParticipantId
+INNER JOIN EventCategories
+    ON Enrolments.CategoryId = EventCategories.CategoryId
+INNER JOIN Events
+    ON EventCategories.EventId = Events.EventId;
