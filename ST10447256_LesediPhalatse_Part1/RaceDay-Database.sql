@@ -290,3 +290,20 @@ SELECT * FROM EventCategories;
 SELECT * FROM Enrolments;
 
 SELECT * FROM Results;
+
+-- Display participant enrolments
+
+SELECT
+    Participants.FirstName,
+    Participants.LastName,
+    Events.EventName,
+    EventCategories.CategoryName,
+    Enrolments.RaceNumber,
+    Enrolments.Status
+FROM Enrolments
+INNER JOIN Participants
+    ON Enrolments.ParticipantId = Participants.ParticipantId
+INNER JOIN EventCategories
+    ON Enrolments.CategoryId = EventCategories.CategoryId
+INNER JOIN Events
+    ON EventCategories.EventId = Events.EventId;
