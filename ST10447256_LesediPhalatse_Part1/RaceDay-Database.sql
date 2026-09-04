@@ -94,3 +94,10 @@ CREATE TABLE Results
 
     FOREIGN KEY (EnrolmentId) REFERENCES Enrolments(EnrolmentId)
 );
+
+-- Insert user roles
+
+INSERT INTO UserRole (RoleName)
+VALUES
+('Organiser'),
+('Participant');
