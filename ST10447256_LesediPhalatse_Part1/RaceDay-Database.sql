@@ -130,3 +130,35 @@ VALUES
     'password456',
     '0822222222'
 );
+
+-- Insert participants
+
+INSERT INTO Participants
+(
+    RoleId,
+    FirstName,
+    LastName,
+    Email,
+    PasswordHash,
+    PhoneNumber,
+    DateOfBirth
+)
+VALUES
+(
+    2,
+    'Sipho',
+    'Dlamini',
+    'sipho@email.com',
+    'password123',
+    '0831111111',
+    '1998-05-14'
+),
+(
+    2,
+    'Lerato',
+    'Nkosi',
+    'lerato@email.com',
+    'password456',
+    '0832222222',
+    '2001-09-20'
+);
