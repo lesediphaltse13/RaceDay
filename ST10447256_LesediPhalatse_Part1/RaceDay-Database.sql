@@ -54,3 +54,16 @@ CREATE TABLE Events
 
     FOREIGN KEY (OrganiserId) REFERENCES Organizers(OrganiserId)
 );
+
+CREATE TABLE EventCategories
+(
+    CategoryId INT IDENTITY(1,1) PRIMARY KEY,
+    EventId INT NOT NULL,
+    CategoryName VARCHAR(100) NOT NULL,
+    DistanceKm DECIMAL(6,2) NOT NULL,
+    EntryFee DECIMAL(10,2) NOT NULL,
+    MaximumParticipants INT,
+    CreatedAt DATETIME2 DEFAULT GETDATE(),
+
+    FOREIGN KEY (EventId) REFERENCES Events(EventId)
+);
