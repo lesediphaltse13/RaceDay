@@ -101,3 +101,32 @@ INSERT INTO UserRole (RoleName)
 VALUES
 ('Organiser'),
 ('Participant');
+
+-- Insert organisers
+
+INSERT INTO Organizers
+(
+    RoleId,
+    FirstName,
+    LastName,
+    Email,
+    PasswordHash,
+    PhoneNumber
+)
+VALUES
+(
+    1,
+    'Thabo',
+    'Mokoena',
+    'thabo@raceday.co.za',
+    'password123',
+    '0821111111'
+),
+(
+    1,
+    'Naledi',
+    'Khumalo',
+    'naledi@raceday.co.za',
+    'password456',
+    '0822222222'
+);
