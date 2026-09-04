@@ -251,3 +251,26 @@ VALUES
 (2, 3, 'Confirmed', 'PRR2101'),
 (1, 4, 'Confirmed', 'CCW5001'),
 (2, 6, 'Confirmed', 'GCC4001');
+
+-- Insert results
+
+INSERT INTO Results
+(
+    EnrolmentId,
+    FinishTime,
+    Position,
+    Status
+)
+VALUES
+(
+    1,
+    '00:52:14',
+    35,
+    'Finished'
+),
+(
+    2,
+    '01:58:40',
+    21,
+    'Finished'
+);
