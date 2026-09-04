@@ -67,3 +67,18 @@ CREATE TABLE EventCategories
 
     FOREIGN KEY (EventId) REFERENCES Events(EventId)
 );
+
+CREATE TABLE Enrolments
+(
+    EnrolmentId INT IDENTITY(1,1) PRIMARY KEY,
+    ParticipantId INT NOT NULL,
+    CategoryId INT NOT NULL,
+    EnrolmentDate DATETIME2 DEFAULT GETDATE(),
+    Status VARCHAR(30) NOT NULL,
+    RaceNumber VARCHAR(30) UNIQUE,
+
+    FOREIGN KEY (ParticipantId) REFERENCES Participants(ParticipantId),
+    FOREIGN KEY (CategoryId) REFERENCES EventCategories(CategoryId),
+
+    UNIQUE (ParticipantId, CategoryId)
+);
