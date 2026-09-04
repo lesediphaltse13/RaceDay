@@ -236,3 +236,18 @@ VALUES
 
 (3, '40 km Cycle', 40.00, 250.00, 400),
 (3, '80 km Cycle', 80.00, 400.00, 300);
+
+-- Insert enrolments
+
+INSERT INTO Enrolments
+(
+    ParticipantId,
+    CategoryId,
+    Status,
+    RaceNumber
+)
+VALUES
+(1, 2, 'Confirmed', 'PRR1001'),
+(2, 3, 'Confirmed', 'PRR2101'),
+(1, 4, 'Confirmed', 'CCW5001'),
+(2, 6, 'Confirmed', 'GCC4001');
