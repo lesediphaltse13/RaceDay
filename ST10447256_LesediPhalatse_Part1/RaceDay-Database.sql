@@ -82,3 +82,15 @@ CREATE TABLE Enrolments
 
     UNIQUE (ParticipantId, CategoryId)
 );
+
+CREATE TABLE Results
+(
+    ResultId INT IDENTITY(1,1) PRIMARY KEY,
+    EnrolmentId INT NOT NULL UNIQUE,
+    FinishTime TIME,
+    Position INT,
+    Status VARCHAR(30) NOT NULL,
+    RecordedAt DATETIME2 DEFAULT GETDATE(),
+
+    FOREIGN KEY (EnrolmentId) REFERENCES Enrolments(EnrolmentId)
+);
