@@ -274,3 +274,19 @@ VALUES
     21,
     'Finished'
 );
+
+-- Display all tables
+
+SELECT * FROM UserRole;
+
+SELECT * FROM Organizers;
+
+SELECT * FROM Participants;
+
+SELECT * FROM Events;
+
+SELECT * FROM EventCategories;
+
+SELECT * FROM Enrolments;
+
+SELECT * FROM Results;
