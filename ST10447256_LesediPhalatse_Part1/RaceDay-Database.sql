@@ -215,3 +215,24 @@ VALUES
     'Gauteng',
     'Cycling route around Pretoria'
 );
+
+-- Insert event categories
+
+INSERT INTO EventCategories
+(
+    EventId,
+    CategoryName,
+    DistanceKm,
+    EntryFee,
+    MaximumParticipants
+)
+VALUES
+(1, '5 km Fun Run', 5.00, 100.00, 500),
+(1, '10 km Road Race', 10.00, 180.00, 800),
+(1, '21.1 km Half Marathon', 21.10, 300.00, 600),
+
+(2, '5 km Charity Walk', 5.00, 80.00, 300),
+(2, '10 km Charity Walk', 10.00, 120.00, 250),
+
+(3, '40 km Cycle', 40.00, 250.00, 400),
+(3, '80 km Cycle', 80.00, 400.00, 300);
