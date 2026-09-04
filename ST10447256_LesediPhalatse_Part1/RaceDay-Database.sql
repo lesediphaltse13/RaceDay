@@ -162,3 +162,56 @@ VALUES
     '0832222222',
     '2001-09-20'
 );
+
+-- Insert events
+
+INSERT INTO Events
+(
+    OrganiserId,
+    EventName,
+    Description,
+    EventType,
+    EventDate,
+    RegistrationClosingDate,
+    Venue,
+    City,
+    Province,
+    RouteInformation
+)
+VALUES
+(
+    1,
+    'Pretoria Road Race',
+    'A road running event in Pretoria.',
+    'Running',
+    '2026-10-17 06:00:00',
+    '2026-10-10 23:59:00',
+    'Loftus Versfeld',
+    'Pretoria',
+    'Gauteng',
+    'Road route through Pretoria'
+),
+(
+    1,
+    'Centurion Charity Walk',
+    'A community charity walking event.',
+    'Walking',
+    '2026-11-07 07:00:00',
+    '2026-10-31 23:59:00',
+    'Centurion Park',
+    'Centurion',
+    'Gauteng',
+    'Walking route around Centurion'
+),
+(
+    2,
+    'Gauteng Cycle Challenge',
+    'A recreational cycling event.',
+    'Cycling',
+    '2026-12-05 06:30:00',
+    '2026-11-28 23:59:00',
+    'Waterkloof',
+    'Pretoria',
+    'Gauteng',
+    'Cycling route around Pretoria'
+);
